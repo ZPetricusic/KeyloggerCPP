@@ -43,6 +43,8 @@ BOOL write_to_file()
             //add the starting data to the new file
             data_file << "SESSION=" << session_number << endl;
             data_file << "TOTAL=" << counter << endl;
+
+            data_file.close();
         }
         else
         {
@@ -99,6 +101,8 @@ BOOL write_to_file()
             log_file.open("log.txt", fstream::in | fstream::out | fstream::app);
 
             log_file << "Keys pressed in session #" << session_number << ": " << counter << endl;
+
+            log_file.close();
         }
         else
         {
